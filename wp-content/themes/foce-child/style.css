@@ -24,3 +24,82 @@ body {
 #video-koukaki {
     width: 100%;
 }
+
+.site-footer {
+    flex-direction: column !important;
+}
+
+.oscars-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20rem;
+}
+
+.oscars-text-div {
+    font-family: "quicksand";
+    font-weight: 700;
+    color: white;
+    font-size: 2rem;
+    max-width: 39rem;
+    width: 100%;
+    text-shadow: 0px 4px 4px #00000040;
+    display: flex;
+    justify-content: center;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("http://localhost/p9_openclassrooms/wp-content/themes/foce/assets/images/tache-orange.png");
+}
+
+.oscars-text {
+    max-width: 32rem;
+}
+
+.oscars-img-div {
+    max-width: 23rem;
+}
+
+@media (max-width: 820px) {
+    .oscars-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20rem;
+    }
+
+    .site-footer {
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .oscars-text-div {
+        font-size: 1.8rem;
+        background-image: none;
+        text-shadow: 0px 0px 4px #ff5e04;
+    }
+
+    .oscars-text {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* KEYFRAMES */
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.story h2::after,
+.story__article::after,
+#studio h2::before {
+    animation: rotation 10s infinite linear;
+}
